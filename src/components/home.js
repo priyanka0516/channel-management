@@ -131,7 +131,7 @@ function Home() {
               <div className="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                 <div className="inner-column">
                   <div className="sec-title">
-                    <span className="title">About Company</span>
+                    <span className="title">About Us</span>
                     <h2>We are leader in <br/>Industrial market Since 1992</h2>
                   </div>
                   <div className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

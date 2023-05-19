@@ -132,7 +132,7 @@ function Home() {
                 <div className="inner-column">
                   <div className="sec-title">
                     <span className="title">About Us</span>
-                    <h2>We are leader in <br/>Industrial market Since 1992</h2>
+                    <h2>We are leader in <br/>Hotel Services</h2>
                   </div>
                   <div className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

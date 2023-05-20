@@ -5,10 +5,7 @@ import { Card, CardGroup, Container } from 'react-bootstrap';
 import "slick-carousel/slick/slick-theme.css";
 import Iframe from 'react-iframe';
 import Bookingform from "./bookingform";
-
-
 function Home() {
-
   const settings = {
     dots: false,
     infinite: true,
@@ -40,7 +37,7 @@ function Home() {
       <>
         <div className="banner-section">      
           <div className="inner-banner">      
-                <div className='container'>
+            <div className='container'>
               <div className="row">
                 <Bookingform/>
         {/* <Slider {...settings}>

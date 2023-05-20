@@ -57,7 +57,6 @@ const Footer =()=>
               <li className="animate"><Link to="/rooms" onClick={scrollToTop}>Rooms</Link></li>
               <li className="animate"><Link to="/dining" onClick={scrollToTop}>Dining</Link></li>
               <li className="animate"><Link to="/contact" onClick={scrollToTop}>Contact Us</Link></li>
-
             </ul>
         </div>
       </div>

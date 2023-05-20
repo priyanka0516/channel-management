@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import { Card, CardGroup, Container ,Row, Col} from 'react-bootstrap';
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 const Rooms = () => {
     const rooms = {
         dots: false,
@@ -12,7 +13,6 @@ const Rooms = () => {
         autoplay:true,
         slidesToScroll: 1
     };
-
     const repeatCount = 7; // Number of times to repeat the card
 const cardData = [
   { id: 1,heading: 'Superior suites', text: 'Superior suites typically feature a spacious ensuite bathroom equipped with a variety of upscale amenities. These may include a separate bathtub and shower, premium toiletries, bathrobes, slippers, and a hairdryer.' },
@@ -25,15 +25,14 @@ const cardData = [
 ];
     return (
         <>
-        <div className="banner-section">      
-            <div className="inner-banner">      
-        
-            <div className="image-section">
-                <img src={require('./assets/image4.jpg')} alt="image1"/>
-            </div>
-             
-       
-            </div>
+           <div className='room-banner'>
+            <div className="container text-center">
+			<div className="row">
+				<div className="col-lg-12">
+                <h3 className='top-text'>Rooms</h3>
+				</div>
+			</div>
+		    </div>
         </div>
         <div className="rooms-area">
             <Container>
@@ -45,9 +44,9 @@ const cardData = [
                     <Col md={4}>
                         <div className="left-side-room">
                             <Slider {...rooms}>
-                                <img src={require('./assets/superior1.jpeg')} alt="superior1" />
-                                <img src={require('./assets/superior2.jpeg')} alt="superior2" />
-                                <img src={require('./assets/superior3.jpeg')} alt="superior3"/>
+                                <img src={require('./assets/superior1.jpeg')} alt="superior1" id="room-suite" />
+                                <img src={require('./assets/superior2.jpeg')} alt="superior2" id="room-suite" />
+                                <img src={require('./assets/superior3.jpeg')} alt="superior3"id="room-suite" />
                             </Slider>
                         </div>               
                     </Col>
@@ -56,7 +55,7 @@ const cardData = [
                             <h3>{card.heading}</h3>
                             <p>{card.text}</p>
                             <div className="d">
-                                            <div className="left-text">
+                            <div className="left-text">
                             <ul className="items">
                                 <li><img src={require('./assets/television.png')} alt="television" /></li>
                                 <li><img src={require('./assets/shower.png')} alt="shower"/></li>
@@ -64,55 +63,18 @@ const cardData = [
                                 <li><img src={require('./assets/telephone.png')} alt="telephone" /></li>
                                 <li><img src={require('./assets/wine.png')} alt="wine" /></li>
                                 <li><img src={require('./assets/microwave.png')} alt="microwave"/></li>
-                                                </ul>
-                                                </div>
-                            <div className="right-text"><button class="service-button">Book Now</button></div>
+                            </ul>
+                            </div>
+                            <div className="right-text"><Link to="/bookroom"><button className="service-button">Book Now</button></Link></div>
                         </div>
                         </div>
                     </Col>
-                    {/* <Col md={4}>
-                        <div className="right-side-room">
-                            <button class="service-button">Book Now</button>
-                        </div>
-                    </Col> */}
             </Row> 
             </div>
             ))}
-        </Col>
-                </Row>
+            </Col>
+            </Row>
             </Container>
-                {/* <div className="container">
-               <div className="row">
-                        <div className="col-md-4">
-                            <div className="left-side-room">
-                            <Slider {...rooms}>
-                                <img src={require('./assets/superior1.jpeg')} alt="superior1" />
-                                <img src={require('./assets/superior2.jpeg')} alt="superior2" />
-                                <img src={require('./assets/superior3.jpeg')} alt="superior3"/>
-                            </Slider>                           
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="middle-side-room">
-                                <h3>Superior Suite</h3>
-                                <p>Superior suites typically feature a spacious ensuite bathroom equipped with a variety of upscale amenities. These may include a separate bathtub and shower, premium toiletries, bathrobes, slippers, and a hairdryer.</p>
-                                <ul className="items">
-                                    <li><img src={require('./assets/television.png')} alt="television" /></li>
-                                    <li><img src={require('./assets/shower.png')} alt="shower"/></li>
-                                    <li><img src={require('./assets/restaurant.png')} alt="restaurant" /></li>
-                                    <li><img src={require('./assets/telephone.png')} alt="telephone" /></li>
-                                    <li><img src={require('./assets/wine.png')} alt="wine" /></li>
-                                    <li><img src={require('./assets/microwave.png')} alt="microwave"/></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="right-side-room">
-                               <button class="service-button">See All Services</button>
-                            </div>
-                        </div>
-                </div>
-            </div>        */}
         </div>
         </>
     )

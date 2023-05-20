@@ -10,6 +10,9 @@ import Dining from './components/dining';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import Bookingform from './components/bookingform';
+import BookNow from './components/booknow';
+import Bookingroom from './components/bookingroom';
+import PaymentPage from './components/paymentpage';
 
 function App() {
   return (
@@ -23,7 +26,10 @@ function App() {
         <Route path='/service' element={<Service />} />
           <Route path='/dining' element={<Dining />} />
           <Route path='/contact' element={<Contact />} />
-               <Route path='/booking' element={<Bookingform/>}/>
+          <Route path='/booking' element={<Bookingform />} />
+          <Route path='/booknow' element={<BookNow />} />
+          <Route path='/bookroom' element={<Bookingroom />} />
+          <Route path='/paymentpage' element={<PaymentPage/>}/>
         </Routes> 
         <Footer/>
     </BrowserRouter>

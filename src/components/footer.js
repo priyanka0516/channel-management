@@ -37,10 +37,10 @@ const Footer =()=>
               <h6 className='footer-title'>Address</h6>
               <div className="des">
                 <ul>
-                  <li className='flex'><span></span>7130 Olaya District, Bashar ibn Burd Street 3206, Al Khobar 34447
+                  <li className='flex'><span><img src={require('./assets/location.png')}alt="mail"/></span>7130 Olaya District, Bashar ibn Burd Street 3206, Al Khobar 34447
                     Saudi Arabia</li>
-                  <li className='flex'><span></span><Link to="mailto: welcome@beatagarden.com"> xxx.com</Link></li>
-                  <li className='flex'><span></span><Link to="tel: +91 6371499414">+91 0378499414</Link></li>
+                  <li className='flex'><span><img src={require('./assets/mail.png')}alt="mail"/></span><Link to="mailto: welcome@beatagarden.com"> xxx.com</Link></li>
+                  <li className='flex'><span><img src={require('./assets/phone-call.png')}alt="mail"/></span><Link to="tel: +91 6371499414">+91 0378499414</Link></li>
                 </ul>
               </div>
             </li>
@@ -63,13 +63,11 @@ const Footer =()=>
       </div>
       <div className='col-sm-4 col-xs-12'>
         <div className='footer-item'>
-          <div className="footer-title">Partnership/Authorization</div>
+          <div className="footer-title">Follow Us On</div>
             <ul className="members">
-              {/* <li><a><img src={require('./../assets/google_client.png')}alt="client1"/></a></li>
-              <li><a><img src={require('./../assets/tesla_client.png')}alt="client2"/></a></li>
-              <li><a><img src={require('./../assets/expedia_client.png')}alt="client3"/></a></li>
-              <li><a><img src={require('./../assets/booking_client.png')}alt="client4"/></a></li>
-              <li><a><img src={require('./../assets/aws_client.png')}alt="client5"/></a></li> */}
+              <li><Link to=""><img src={require('./assets/facebook-app.png')} alt="client1" /></Link></li>
+              <li><Link to=""><img src={require('./assets/instagram-app.png')} alt="client1" /></Link></li>
+              <li><Link to=""><img src={require('./assets/linkedin-app.png')}alt="client1"/></Link></li>
             </ul>
           </div>
         </div>

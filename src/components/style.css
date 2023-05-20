@@ -166,18 +166,25 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    text-align: left;
+    color: #000;
+    font-size: 14px;
 }
-
+.error{
+    font-size: 14px;
+    text-align: left;
+    color: red;
+}
 input {
     width: 100%;
-    padding: 10px;
+    margin: 10px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0070ad;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -197,80 +204,19 @@ button {
         padding: 10px;
     }
 }
-
-
-/* .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-input[type="date"],
-input[type="number"],
-select,
-input[type="text"] {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    margin-top: 5px;
-}
-select{
-    height: 42px;
-}
-button[type="submit"] {
-    background-color: #0077cc;
-    color: #fff;
-    padding: 10px;
-}
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 100%;
-    background-color: #a68d5a;
-}
-
-form {
-    white-space: nowrap;
-    display: flex;
-}
-
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.form-group {
-    margin: 10px;
-}
-input{
-    display: block;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 0.8em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: transparent;
-}
-label{
-    font-size: 0.8em;
-} */
 @media (min-width: 320px) and (max-width: 767px) {
 .middle-side-room{
     margin: 10px 0px;
+}
+.c-7{
+    font-size: 12px;
+    text-align: left;
+}
+.c3 span{
+    font-size: 12px;
+}
+#room-suite{
+    height: 200px !important;
 }
     .middle-side-room p {width: 100%;}
     .d{
@@ -447,7 +393,7 @@ label{
     font-size: 16px;
     margin: 4px 2px;
     border: 2px solid #000;
-    background-color: #007bff;
+    background-color: #0070ad;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -518,6 +464,15 @@ label{
     top: 50%;
     padding: 10px;
 }
+.room-banner{
+    padding: 150px 0 150px;
+        background: url('./assets/superior2.jpeg') no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: bottom;
+        position: relative;
+}
+
 /* conact us */
 .contact-banner{
     padding: 150px 0 150px;
@@ -528,7 +483,8 @@ label{
     position: relative;
 }
 .contact-banner::before ,
-.dining::before
+.dining::before,
+.room-banner::before
 {
     background: #010101;
     content: "";
@@ -540,7 +496,7 @@ label{
     z-index: 1;
     opacity: 0.5;
 }
-.contact-banner .container,.dining .container{
+.contact-banner .container,.dining .container,.room-banner .container{
     position: relative;
     z-index: 2;
 }
@@ -853,7 +809,16 @@ h2 {
      -webkit-animation: animatezoom 0.6s;
      animation: animatezoom 0.6s;
  }
-
+.flex{
+    display: flex;
+}
+.flex span{
+    margin-right: 10px
+}
+.flex span img{
+    height: 20px;
+    width: 20px;
+}
  .footer-item ul li .des {
      float: left;
      width: 100%;
@@ -884,9 +849,9 @@ h2 {
  }
 
  .footer-item ul.members {
-     list-style: none;
-     float: left;
-     padding-left: 0;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
  }
 
  .footer-item ul.members li {
@@ -902,18 +867,12 @@ h2 {
  } */
 
  ul.members li a {
-     color: #fff;
-     line-height: 22px;
-     font-size: 13px;
-     max-width: 95px;
-     display: block;
-     border: 1px solid #eee;
-     text-align: center;
-     margin: 0px 8px 20px 0px;
-     padding: 4px 4px;
-     min-width: 95px;
-     max-height: 50px;
-     min-height: 50px;
+    color: #fff;
+    line-height: 22px;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    padding: 4px 4px;
  }
 .copyright {
       text-align: center;
@@ -922,16 +881,245 @@ h2 {
       font-size: 15px;
   }
 
- .flex {
-     display: flex;
-     line-height: 28px;
- }
+/* final booking */
+.book-top{
+    border-radius: 4px;
+    border: 1px solid rgba(245, 166, 35, 0.19);
+    background-color: rgb(254, 246, 233);
+    padding: 16px;
+    color: rgb(211, 140, 23);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.booking-Ending{
+    padding: 20px;
+}
+.booking-left{
+    border: 1px solid rgba(122, 122, 122, 0.17);
+    border-radius: 4px;
+}
+.heading{
+    align-items: center;
+    padding: 14px 24px;
+    color: rgb(0, 0, 0);
+    background: rgb(249, 249, 251);
+}
+.booking-Ending .heading h3{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 10px 0px;
+    background-color: #f9f9fb;
+    
+}
+.booking-Ending p{text-align: left;
+    padding: 20px 20px;
+    font-size: 14px;
+    color:#848484;
+    margin-bottom: 0;
+}
+.final-form{
+    padding: 20px;
+}
+.final-form label{
+    font-size: 14px;
+    margin: 0px;
+    text-align: left;
+}
+.final-form input{
+    margin: 10px 0px;
+}
+.otp-button{
+    width: 100%;
+    margin: 10px 0px;
+}
 
- .flex span img {
-     height: 20px;
-     margin-right: 10px;
- }
+.booking-right{
+    border-radius: 4px;
+    border: solid 1px rgba(122, 122, 122, 0.17);
+    box-shadow: 0 2px 26px 0 rgba(125, 125, 125, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 24px;
+}
+.book-right-top{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.all-text-heading{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 280px;
+    margin-bottom: 8px;
+}
+.hotel-rating{
+    display: flex;
+}
+.hotel-rating p {
+    margin: 0;
+    padding: 0px 20px 0px 5px;
+}
+.hotel-image{
+    border-radius: 4px;
+    box-shadow: rgba(125, 125, 125, 0.1) 0px 2px 6px 0px;
+    width: 80px;
+    height: 60px;
+    opacity: 1.2;
+    border: 1px solid rgb(151, 151, 151);
+    background-color: rgb(216, 216, 216);
+}
+.verify-button{
 
- .members img {
-     width: 100%;
- }
+            border-radius: 4px;
+            background-color: rgb(26, 182, 79);
+            border: 0px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.2;
+            padding: 14px;
+            height: auto;
+            margin-bottom: -12px;
+            margin-top: 10px;
+            flex: 1 1 50%;
+            margin-right: 24px;
+            display: block;
+            cursor: pointer;
+            outline: 0px;
+            width: 40%;
+
+}
+.hotel-image img{
+    height: 60px;
+    width: 80px;
+}
+.span-heading{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2;
+    color: rgb(12, 10, 21);
+    margin-top: 8px;
+}
+.book-right-bottom{
+    border-radius: 4px;
+    margin: 18px 0px;
+}
+.c2{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.c2-left{
+    display: flex;
+    border-radius: 4px 0px 0px 4px;
+    padding: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.c2-left-icon{
+    margin-top: 2px;
+        height: 20px;
+        width: 20px;
+}
+.dates{
+    font-size: 14px;
+    color: #0c0a15;
+    line-height: 1.71;
+    font-weight: 600;
+    background: #fff;
+    margin: 5px 5px;
+    padding-top: 5px;
+    display: block;
+}
+.c3{
+    display: flex;
+    padding: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: relative; 
+}
+.rating{
+    background-color: #8fc400;
+    border-radius: 10px;
+}
+.rating span{
+    font-size: 10px;
+    color: #fff;
+    margin-top: 5px;
+    padding: 8px;
+}
+.c3 span{
+    font-size: 14px;
+    color: #0c0a15;
+    line-height: 1.71;margin: 5px 5px;
+    padding-top: 5px;
+    font-weight: 600;
+    background: #fff;
+    padding: 0;
+    margin-left: 22px;
+    margin-right: 12pxt;  
+}
+.c4{
+    margin: 16px 0px;
+}
+.c5{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 12px 0px;
+}
+.c-7{
+    font-size: 14px;
+    line-height: 2;
+    text-align: left;
+    color: rgb(34, 34, 34);
+}
+.c-8{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 2;
+    color: rgb(34, 34, 34);
+}
+.bar{
+    border: 1px solid rgb(240, 240, 240);
+    margin: 24px 0px;
+}
+/* payment page */
+.payment-container {
+ 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.rating span img{
+    height: 10px;
+    margin-bottom: 4px
+}
+.final-form a{
+    text-decoration: none;
+}
+button:hover {
+    background-color: #45a049;
+}

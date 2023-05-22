@@ -52,7 +52,7 @@ const Contact = () => {
 			<div className="row">
 				<div className="col-lg-12">
                 <h3 className='top-text'>Contact Us</h3>
-				</div>
+				</div>ju
 			</div>
 		    </div>
         </div>

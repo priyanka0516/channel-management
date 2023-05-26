@@ -28,6 +28,7 @@ export default function (props) {
                 type="email"
                 className="form-control mt-1"
                 placeholder="Enter email"
+                required
               />
             </div>
             <div className="form-group mt-3">
@@ -36,6 +37,7 @@ export default function (props) {
                 type="password"
                 className="form-control mt-1"
                 placeholder="Enter password"
+                required
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -65,6 +67,7 @@ export default function (props) {
               type="email"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              required
             />
           </div>
           <div className="form-group mt-3">
@@ -73,6 +76,7 @@ export default function (props) {
               type="email"
               className="form-control mt-1"
               placeholder="Email Address"
+              required
             />
           </div>
           <div className="form-group mt-3">
@@ -81,6 +85,7 @@ export default function (props) {
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              required
             />
           </div>
           <div className="d-grid gap-2 mt-3">

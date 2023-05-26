@@ -1,61 +1,88 @@
 import React, { useState } from 'react';
 const PaymentPage = () => {
-     const [cardNumber, setCardNumber] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
   const [cardHolderName, setCardHolderName] = useState('');
-  const [cvv, setCvv] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
+  const [expiryMonth, setExpiryMonth] = useState('');
+  const [expiryYear, setExpiryYear] = useState('');
+  const [cvv, setCVV] = useState('');
   const [errors, setErrors] = useState({});
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const handlepaymentSubmit = (e) => {
-    e.preventDefault();
-
-    // Validate form fields
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
-    // Perform form submission logic here, e.g., send data to a server
-
-    // Reset form fields and errors
-    setCardNumber('');
-    setCardHolderName('');
-    setCvv('');
-    setExpiryDate('');
-    setErrors({});
+  const openDialog = () => {
+    setIsDialogOpen(true);
   };
 
-  const validateForm = () => {
-    let errors = {};
+  const closeDialog = () => {
+    setIsDialogOpen(false);
+  };
 
-    // Validate card number
-    if (!cardNumber) {
-      errors.cardNumber = 'Card number is required';
-    } else if (!/^\d{16}$/.test(cardNumber)) {
-      errors.cardNumber = 'Card number must be 16 digits';
+const handleCardNumberChange = (event) => {
+    const value = event.target.value;
+    const numberValue = value.replace(/\D/g, ''); // Remove non-digit characters
+
+    setCardNumber(numberValue);
+  };
+
+  const handleCardHolderNameChange = (event) => {
+    const value = event.target.value;
+    const alphaNumericValue = value.replace(/[^a-zA-Z0-9 ]/g, ''); // Remove non-alphanumeric characters
+
+    setCardHolderName(alphaNumericValue);
+  };
+
+  const handleExpiryMonthChange = (event) => {
+    const value = event.target.value;
+    const numberValue = value.replace(/\D/g, ''); // Remove non-digit characters
+
+    setExpiryMonth(numberValue);
+  };
+
+  const handleExpiryYearChange = (event) => {
+    const value = event.target.value;
+    const numberValue = value.replace(/\D/g, ''); // Remove non-digit characters
+
+    setExpiryYear(numberValue);
+  };
+
+  const handleCVVChange = (event) => {
+    const value = event.target.value;
+    const numberValue = value.replace(/\D/g, ''); // Remove non-digit characters
+
+    setCVV(numberValue);
+  };
+
+  const handlepaymentSubmit = (event) => {
+    event.preventDefault();
+    openDialog();
+    
+    const validationErrors = {};
+
+    if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
+      validationErrors.cardNumber = 'Card number must be a 16-digit number.';
     }
 
-    // Validate card holder name
-    if (!cardHolderName) {
-      errors.cardHolderName = 'Cardholder name is required';
+    if (cardHolderName.trim() === '') {
+      validationErrors.cardHolderName = 'Card holder name is required.';
     }
 
-    // Validate CVV
-    if (!cvv) {
-      errors.cvv = 'CVV is required';
-    } else if (!/^\d{3}$/.test(cvv)) {
-      errors.cvv = 'CVV must be 3 digits';
+    if (expiryMonth.length !== 2 || !/^\d+$/.test(expiryMonth)) {
+      validationErrors.expiryMonth = 'Expiry month must be a two-digit number.';
     }
 
-    // Validate expiry date
-    if (!expiryDate) {
-      errors.expiryDate = 'Expiry date is required';
-    } else if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
-      errors.expiryDate = 'Expiry date must be in format MM/YY';
+    if (expiryYear.length !== 2 || !/^\d+$/.test(expiryYear)) {
+      validationErrors.expiryYear = 'Expiry year must be a two-digit number.';
     }
 
-    return errors;
+    if (cvv.length !== 3 || !/^\d+$/.test(cvv)) {
+      validationErrors.cvv = 'CVV must be a three-digit number.';
+    }
+
+    setErrors(validationErrors);
+
+    // If there are no validation errors, proceed with form submission
+    if (Object.keys(validationErrors).length === 0) {
+      // Perform form submission logic here
+    }
   };
     return (
       <div className='booking-Ending'>
@@ -66,79 +93,99 @@ const PaymentPage = () => {
                         <div className='booking-left'>
                           <div className='heading'> <h3>Billing Information</h3></div>                    
                           <p>We will use these details to share your booking information</p>
-  <div className="payment-container">
-      <h2>Payment Details</h2>
-
-                                <form className="payment-form" onSubmit={handlepaymentSubmit}>
-                                    <div className='row'>
-        <div className="col-md-6">
-          <label htmlFor="cardNumber">Card Number</label>
-         <input
-          type="text"
-          id="cardNumber"
-          value={cardNumber}
-          onChange={(e) => setCardNumber(e.target.value)}
-          required
-        />
-        {errors.cardNumber && <span className="error">{errors.cardNumber}</span>}
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="cardHolderName">Cardholder Name</label>
-       <input
-          type="text"
-          id="cardHolderName"
-          value={cardHolderName}
-          onChange={(e) => setCardHolderName(e.target.value)}
-          required
-        />
-        {errors.cardHolderName && <span className="error">{errors.cardHolderName}</span>}
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="expiryDate">Expiry Date</label>
-           <input
-          type="date"
-          id="expiryDate"
-          value={expiryDate}
-          onChange={(e) => setExpiryDate(e.target.value)}
-          required
-        />
-        {errors.expiryDate && <span className="error">{errors.expiryDate}</span>}
-        </div>
-
-         <div className="col-md-6">
-          <label htmlFor="cvv">CVV</label>
-          <input
-          type="text"
-          id="cvv"
-          value={cvv}
-          onChange={(e) => setCvv(e.target.value)}
-          required
-        />
-        {errors.cvv && <span className="error">{errors.cvv}</span>}
-        </div>
-        <div className="col-md-12">
-        <button type="submit">Pay Now</button></div>
-        </div>
-      </form>
-    </div>
+                          <div className="payment-container">
+                            <h2>Payment Details</h2>
+                              <form className="payment-form" onSubmit={handlepaymentSubmit}>
+                                <div className='row'>
+                                <div className="col-md-6">
+                                  <label htmlFor="cardNumber">Card Number</label>
+                                  <input
+                                  type="text"
+                                  id="card-number"
+                                  value={cardNumber}
+                                  onChange={handleCardNumberChange}
+                                  maxLength={16}
+                                  pattern="\d*"
+                                  inputMode="numeric"
+                                  required
+                                />
+                              {errors.cardNumber && <span className="error">{errors.cardNumber}</span>}
+                              </div>
+                              <div className="col-md-6">
+                                <label htmlFor="cardHolderName">Cardholder Name</label>
+                                <input
+                                type="text"
+                                id="cardHolderName"
+                                value={cardHolderName}
+                                onChange={handleCardHolderNameChange}
+                                required
+                              />
+                              {errors.cardHolderName && <span className="error">{errors.cardHolderName}</span>}
+                              </div>
+                            <div className="col-md-12">
+                        <label htmlFor="expiryDate">Expiry Date</label>
+                        <div className='row'>
+                          <div className='col-md-6'>
+                             <input
+                              type="text"
+                              id="expiry-month"
+                              maxLength={2}
+                              pattern="\d*"
+                              inputMode="numeric"
+                              value={expiryMonth}
+                              onChange={handleExpiryMonthChange}
+                              placeholder="MM"
+                            />
+                              {errors.expiryMonth && <span className="error">{errors.expiryMonth}</span>}
+                          </div>
+                          <div className='col-md-6'>
+                            <input
+                            type="text"
+                            id="expiry-date"
+                            value={expiryYear}
+                            maxLength="2"
+                            onChange={handleExpiryYearChange}
+                            placeholder="YY"
+                            />
+                          {errors.expiryYear && <span className="error">{errors.expiryYear}</span>}
+                          </div>
                         </div>
-                </div>
-                  <div className='col-md-6'>
-                      <div className='booking-right'>
-                          <div>
-                              <div className='book-right-top'>
-                              <div className='all-left'>
-                                      <h3 className='all-text-heading'>SPOT ON 810979 JBH Residency</h3>
-                  <div className='hotel-rating'>
-                    <div className='rating'><span>3.9    <img src={require('./assets/star.png')} alt="about" /></span></div>
-                                      <p>1Ratings</p>
-                                      <p>Fabulous</p>
-                                  </div>
-                    <h6 className='span-heading'>1 Night</h6>
-                    </div>
-                  <div className='hotel-image'>
-                 <img src={require('./assets/superior2.jpeg')} alt="about" id="about-image"/>
+                      </div>
+                      <div className="col-md-6">
+                        <label htmlFor="cvv">CVV</label>
+                        <input
+                        type="text"
+                        id="cvv"
+                        maxLength={3}   
+                        value={cvv}
+                        onChange={handleCVVChange}
+                        required
+                      />
+                      {errors.cvv && <span className="error">{errors.cvv}</span>}
+                      </div>
+                      <div className="col-md-12">
+                      <button type="submit">Pay Now</button></div>
+                      </div>
+                    </form>
                   </div>
+                </div>
+                </div>
+                <div className='col-md-6'>
+                  <div className='booking-right'>
+                    <div>
+                      <div className='book-right-top'>
+                        <div className='all-left'>
+                          <h3 className='all-text-heading'>SPOT ON 810979 JBH Residency</h3>
+                            <div className='hotel-rating'>
+                              <div className='rating'><span>3.9    <img src={require('./assets/star.png')} alt="about" /></span></div>
+                                <p>1Ratings</p>
+                                <p>Fabulous</p>
+                              </div>
+                              <h6 className='span-heading'>1 Night</h6>
+                        </div>
+                        <div className='hotel-image'>
+                          <img src={require('./assets/superior2.jpeg')} alt="about" id="about-image"/>
+                        </div>
                               </div>
                               <div className='book-right-bottom'>
                               <div className='c2'>
@@ -179,7 +226,17 @@ const PaymentPage = () => {
                               </div>
                           </div>
                       </div>                      
-                </div>
+            </div>
+             {isDialogOpen && (
+            <div className="dialog">
+              <div className="dialog-content">
+                      <h3>Payment Confirmation</h3>
+                      <p>Please enter your One Time Password(OTP) sent to your registered Mobile No:</p>
+                <p>Thank you for your payment!</p>
+                <button onClick={closeDialog}>Close</button>
+              </div>
+            </div>
+            )}
             </div>   
           </div>
     </div>

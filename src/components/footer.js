@@ -39,7 +39,7 @@ const Footer =()=>
                 <ul>
                   <li className='flex'><span><img src={require('./assets/location.png')}alt="mail"/></span>7130 Olaya District, Bashar ibn Burd Street 3206, Al Khobar 34447
                     Saudi Arabia</li>
-                  <li className='flex'><span><img src={require('./assets/mail.png')}alt="mail"/></span><Link to="mailto: welcome@beatagarden.com"> xxx.com</Link></li>
+                  <li className='flex'><span><img src={require('./assets/mail.png')}alt="mail"/></span><Link to="mailto: welcome@beatagarden.com">abc.com</Link></li>
                   <li className='flex'><span><img src={require('./assets/phone-call.png')}alt="mail"/></span><Link to="tel: +91 6371499414">+91 0378499414</Link></li>
                 </ul>
               </div>

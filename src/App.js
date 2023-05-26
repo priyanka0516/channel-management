@@ -13,24 +13,29 @@ import Bookingform from './components/bookingform';
 import BookNow from './components/booknow';
 import Bookingroom from './components/bookingroom';
 import PaymentPage from './components/paymentpage';
+import Login from './components/Login';
+import Forgotpassword from './components/forgotpassword';
+
 function App() {
   return (
     <div className="App">
     <BrowserRouter>
-      <Header/>
+    <Header/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/rooms' element={<Rooms />} />
-        <Route path='/service' element={<Service />} />
-        <Route path='/dining' element={<Dining />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/booking' element={<Bookingform />} />
-        <Route path='/booknow' element={<BookNow />} />
-        <Route path='/bookroom' element={<Bookingroom />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/rooms' element={<Rooms/>}/>
+        <Route path='/service' element={<Service/>}/>
+        <Route path='/dining' element={<Dining/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/booking' element={<Bookingform/>}/>
+        <Route path='/booknow' element={<BookNow/>}/>
+        <Route path='/bookroom' element={<Bookingroom/>}/>
         <Route path='/paymentpage' element={<PaymentPage/>}/>
-        </Routes> 
-        <Footer/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/forgotpassword' element={<Forgotpassword />} />
+      </Routes> 
+      <Footer/>
     </BrowserRouter>
     </div>
   );

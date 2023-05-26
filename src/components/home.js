@@ -174,8 +174,8 @@ function Home() {
                         </div>
                     </div>
     </div>
-        </section>
-            <section id="reservation-section">
+      </section>
+      <section id="reservation-section">
 			<div className="container">
 				<div className="reservation-box">
 					<div className="row">
@@ -191,15 +191,14 @@ function Home() {
                     <li><img src={require('./assets/air-conditioner.png')} alt="image3"/>Air-conditioner</li>
                   </ul>
                       </div>
-                      <div className="col-md-6">
-                       <ul className="services">
+                  <div className="col-md-6">
+                  <ul className="services">
                     <li><img src={require('./assets/generator.png')} alt="image3"/>Power Backup</li>
                     <li><img src={require('./assets/tv.png')} alt="image3"/>Tv</li>
                     <li><img src={require('./assets/geyser.png')} alt="image3"/>Geyser</li>
                   </ul>
                     </div>   
-                      </div>
-                      
+                      </div> 
                   </div>
 						</div>
 					</div>

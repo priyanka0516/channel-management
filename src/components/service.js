@@ -11,7 +11,7 @@ export default function Service() {
       autoplay: true,
       speed: 5000,
       autoplaySpeed: 2000,
-           responsive: [
+      responsive: [
         {
           breakpoint: 1024,
           settings: {
@@ -129,7 +129,7 @@ export default function Service() {
           </div>
           <div className='col-md-4'>
           <div className="why-choose-column">
-         <img src={require('./assets/free-wifi.gif')} id="tech_logo" alt='Workflow'/>
+          <img src={require('./assets/free-wifi.gif')} id="tech_logo" alt='Workflow'/>
             <div className="all-service">
               <h3>Free Wifi</h3>
               <p>We are offering wifi connections in our hotel rooms,for our guests.</p>
@@ -138,7 +138,7 @@ export default function Service() {
           </div>
           <div className='col-md-4'>
           <div className="why-choose-column">
-      <img src={require('./assets/tv.gif')} id="tech_logo" alt='Workflow'/>
+          <img src={require('./assets/tv.gif')} id="tech_logo" alt='Workflow'/>
             <div className="all-service">
               <h3>Tv</h3>
               <p>We are taking care of our guests by offering them entertainment and convenience.</p>
@@ -147,7 +147,7 @@ export default function Service() {
           </div>
           <div className='col-md-4'>
           <div className="why-choose-column">
-        <img src={require('./assets/swimming-pool.gif')} id="tech_logo" alt='Workflow'/>
+            <img src={require('./assets/swimming-pool.gif')} id="tech_logo" alt='Workflow'/>
             <div className="all-service">
               <h3>Swimming-pool</h3>
               <p>We are offering swimming pools in our hotel rooms, it can be a unique and enticing feature for our guests. Having a private swimming pool within a hotel room can provide a luxurious and exclusive experience, appealing to guests who value privacy and convenience.</p>

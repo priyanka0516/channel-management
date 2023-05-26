@@ -58,6 +58,9 @@ body {
 .navbar-toggler {
     background-color: #0070ad;
 }
+.navbar-toggler:hover{
+    background-color: #0070ad;
+}
 .slick-slider h3 {
     font-size: 18px;
     margin: 10px 0;
@@ -129,13 +132,12 @@ input:hover {
 
 .book-button {
     width: 100%;
-    padding: 10px;
-    margin: 1em;
+    padding: 15px;
+    margin: 10px 0px;
     font-size: 14px;
     border: 1px solid #e4e6e8;
     background-color: #0070ad;
     color: #fff;
-
 }
 
 .book-button:hover {
@@ -144,7 +146,7 @@ input:hover {
     border: 3px solid #0070ad;
 }
 
-/*  */
+/* checkin form */
 .checkin-form .container {
     padding: 20px 20px;
 }
@@ -153,7 +155,6 @@ input:hover {
     padding: 20px;
     border-radius: 5px;
 }
-
 h2 {
     text-align: center;
 }
@@ -218,33 +219,56 @@ button {
 #room-suite{
     height: 200px !important;
 }
-    .middle-side-room p {width: 100%;}
-    .d{
-        display: inline-block !important;
+.middle-side-room p {width: 100%;}
+.d{
+    display: inline-block !important;
+}
+.items li{
+    padding: 4px !important;
+}
+.card img{
+    height: 30px !important;
+}
+.items {
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 0;
+}
+.right-text{
+    padding: 0 !important;
+}
+.navbar-nav{
+    line-height: 3.125rem;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: calc((12/16)*1rem);
+    padding-bottom: calc((12/16)*1rem);
+    width: 100%;
     }
-    .items li{
-        padding: 4px !important;
-    }
-    .card img{
-        height: 30px !important;
-    }
-        .items {
-            display: flex;
-            padding: 10px 0px;
-            padding-left: 0;
-        }
-        .right-text{
-            padding: 0 !important;
-        }
 }
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
+.navbar-nav {
+        line-height: 3.125rem;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: calc((12/16)*1rem);
+        padding-bottom: calc((12/16)*1rem);
+        width: 100%;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1334px) {
-
-
 }
 
 @media (min-width:1400px) and (max-width:1920px) {
@@ -274,8 +298,8 @@ button {
     display: block;
     font-size: 18px;
     line-height: 24px;
-    color: #ff2222;
-    font-weight: 500;
+    color: #0070ad;
+    font-weight: 700;
     margin: 15px 0px;
 }
 
@@ -501,9 +525,8 @@ button {
     z-index: 2;
 }
 .top-text {
-    font-size: 35px;
+    font-size: 25px;
     color: #ffffff;
-    /* font-family: 'Arbutus Slab', serif; */
     padding: 0px;
 }
 .inner-contact{
@@ -933,6 +956,7 @@ h2 {
 }
 .otp-button{
     width: 100%;
+    padding: 15px 0px;
     margin: 10px 0px;
 }
 
@@ -1104,12 +1128,11 @@ h2 {
     flex-direction: column;
 }
 
-
 button {
-    padding: 10px 20px;
-    background-color: #4caf50;
+    padding: 5px 20px;
     color: #fff;
     border: none;
+    font-size: 14px;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -1122,4 +1145,204 @@ button {
 }
 button:hover {
     background-color: #45a049;
+}
+/* Login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+/* 
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input {
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+} */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+    position: fixed;
+    background: white;
+    width: 30%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+/* login */
+#login{
+    padding: 20px;
+}
+.login-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.left h2{
+    margin: 10px 20px;
+}
+.error-message{
+    font-size: 14px;
+    text-align: left;
+    color: red;
+}
+.cancel-button{
+    background: none;
+}
+.login-button{
+    width: 100%;
+    font-size: 14px;
+    order: none;
+    outline: none ;
+    text-decoration: none ;
+    background-color: #0070ad;
+}
+.orglab{
+    font-size: .7rem;
+    color: #0070ad;
+    background: none;
+    padding: 0;
+    margin-left: 8px;
+    font-weight: 600;
+}
+.orglab:hover{
+    background: none;
+}
+.cancel-button:hover{
+    background: none;
+}
+.rightTxt {
+    text-align: center;
+    margin: 10px 0px;
+    display: flex;
+}
+.orangeTxt {
+    font-weight: 700;
+    font-size: .7rem;
+    color: #f47824;
+    text-decoration: none;
+}
+
+.left{
+    display:flex;
+}
+.left h6{
+    font-size: .7rem;
+    padding: 0px 0px;
+    margin: 0;
+    font-weight: 700;
+}
+.App {
+    background-color: white;
+}
+
+.Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+.form-control{
+    font-size: 14px;
+}
+.text-center{
+    font-size: 14px;
+}
+.btn{
+    font-size: 14px;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+/* assessibility */
+.assessibility-banner{
+    padding: 150px 0 150px;
+    background: url('./assets/queen_room.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+}
+.assessibility-banner .container {
+    position: relative;
+    z-index: 2;
+}
+.dtr-feature-box {
+    position: relative;
+    padding: 50px 30px 50px 80px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(20, 39, 82, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(20, 39, 82, 0.1);
+}
+.dtr-feature-box-icon {
+    background-color: #0089f3;
+    color: #fff;
 }

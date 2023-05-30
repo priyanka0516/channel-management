@@ -65,7 +65,10 @@ const cardData = [
                                 <li><img src={require('./assets/microwave.png')} alt="microwave"/></li>
                             </ul>
                             </div>
-                            <div className="right-text"><Link to="/bookroom"><button className="service-button">Book Now</button></Link></div>
+                                <div className="right-text">
+                                                <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
+                                                  <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
+                                </div>
                         </div>
                         </div>
                     </Col>

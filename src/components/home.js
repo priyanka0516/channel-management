@@ -33,9 +33,79 @@ function Home() {
       },
     ],
   };
+     var hoteldestination = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      autoplay: true,
+      slidesToShow: 6,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+   var hotels = {
+      dots: false,
+      infinite: true,
+     speed: 500,
+       autoplay: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
     return (
       <>
-        <div className="banner-section">      
+      <div className="banner-section">      
           <div className="inner-banner">      
             <div className='container'>
               <div className="row">
@@ -121,8 +191,8 @@ function Home() {
               </div>
             </div>
         </div>
-        </div>
-      <section className="about-section">
+      </div>
+      {/* <section className="about-section">
         <div className="container">
             <div className="row">                
               <div className="content-column col-lg-6 col-md-12 col-sm-12 order-2">
@@ -174,8 +244,8 @@ function Home() {
                         </div>
                     </div>
     </div>
-      </section>
-      <section id="reservation-section">
+      </section> */}
+      {/* <section id="reservation-section">
 			<div className="container">
 				<div className="reservation-box">
 					<div className="row">
@@ -204,9 +274,129 @@ function Home() {
 					</div>
 				</div>
 			</div>
-		</section>
-        <section className="map">
-          <div className="container-fluid">
+        </section> */}
+        <section id="landing-hotels">
+          <div className="container">
+            <div className="landingcard">
+              <h2>Trending Destinations</h2>
+              <div className="trending-hotellist">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="trends">
+                    <img src={require('./assets/himachal.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                    <div className="gest"><p>Himachal Pradesh</p></div>
+                  </div> 
+                </div>
+                  <div className="col-md-6">
+                    <div className="trends">
+                      <img src={require('./assets/mumbai.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                       <div className="gest"><p>Mumbai</p></div>
+                  </div> 
+                </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="trends">
+                      <img src={require('./assets/chennai.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                      <div className="gest"><p>Chennai</p></div>
+                    </div> 
+                  </div>
+                    <div className="col-md-4">
+                    <div className="trends">
+                      <img src={require('./assets/delhi.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                      <div className="gest"><p>New Delhi</p></div>
+                    </div> 
+                  </div>
+                    <div className="col-md-4">
+                    <div className="trends">
+                      <img src={require('./assets/vanaras.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                      <div className="gest"><p>Banaras</p></div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div className="hotel-desitnation">
+                <div>
+                <h2>Explore India</h2>
+                <Slider {...hoteldestination}>
+                <div className="hotel-desitnation-place">
+                  <img src={require('./assets/goa.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                  <p>Goa</p>
+                </div>
+                  <div className="hotel-desitnation-place">
+                  <img src={require('./assets/manali.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                  <p>Manali</p>
+                </div>
+                 <div className="hotel-desitnation-place">
+                  <img src={require('./assets/lonavala.jpg')} alt="image3" className="hotels-desitnation-slider"/>
+                  <p>Lonavala</p>
+                </div>
+                <div className="hotel-desitnation-place">
+                  <img src={require('./assets/bangalore.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                  <p>Banglore</p>
+                </div>
+                <div className="hotel-desitnation-place">
+                  <img src={require('./assets/rishikesh.jpg')} alt="image3"className="hotels-desitnation-slider" />
+                  <p>Rishikesh</p>
+                </div>
+                  <div className="hotel-desitnation-place">
+                  <img src={require('./assets/mumbai.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                  <p>Mumbai</p>
+                </div>
+                  <div className="hotel-desitnation-place">
+                  <img src={require('./assets/Shimla.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                  <p>Shimla</p>
+                </div>
+                <div className="hotel-desitnation-place">
+                  <img src={require('./assets/ooty.jpg')} alt="image3" className="hotels-desitnation-slider"/>
+                  <p>Ooty</p>
+                </div>
+              </Slider>
+              </div>  
+              </div>
+              <div className="hotel-type">
+                <div>
+                <h2>Browse by property type </h2>
+                <Slider {...hotels}>
+                <div className="hotel-item">
+                  <img src={require('./assets/hotel.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Hotels</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/hillstation.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Hill station</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/poolvilla.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Pool Villas</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/apartment.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Apartments</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/resort.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Resorts</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/cottage.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Cottages</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/glamping.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Glamping</p>
+                </div>
+                <div className="hotel-item">
+                  <img src={require('./assets/guest-house.jpg')} alt="image3" className="hotels-slider" />
+                  <p>Guest Houses</p>
+                </div>
+              </Slider>
+              </div>  
+              </div>
+            </div> 
+          </div>
+        </section>
+      <section className="map">
             <div className="row">
               <div className="col-md-12">
                  <div id="map">   
@@ -219,8 +409,7 @@ function Home() {
                         </div>    
               </div>
             </div>
-          </div>
-        </section>
+      </section>
       </>
   );
 }

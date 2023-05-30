@@ -27,6 +27,9 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
+/* .container{
+    width: 1110px;
+} */
 .navbar {
     padding: 0;
     margin: 0;
@@ -200,12 +203,24 @@ button {
 }
 
 /* Responsive styles for small screens */
-@media (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 320px) {
+    .hotel-item{
+        padding: 0px 0px;
+    }
+        .hotels-desitnation-place {
+            padding: 0px 0px;
+        }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .hotel-item{
+        padding: 0px 0px;
+    }
+        .hotels-desitnation-place {
+            padding: 0px 0px;
+        }
     .form-container {
         padding: 10px;
     }
-}
-@media (min-width: 320px) and (max-width: 767px) {
 .middle-side-room{
     margin: 10px 0px;
 }
@@ -267,24 +282,48 @@ button {
         padding-bottom: calc((12/16)*1rem);
         width: 100%;
     }
+    .hotel-item {
+        padding: 0px 10px;
+    }
+    .hotel-desitnation-place {
+        padding: 0px 10px;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1334px) {
+    .hotel-item {
+        padding: 0px 10px;
+    }
+    .hotel-desitnation-place{
+        padding: 0px 10px;
+    }
 }
 
 @media (min-width:1400px) and (max-width:1920px) {
-  
+    .hotel-item {
+        padding: 0px 10px;
+    }
+    .hotel-desitnation-place {
+        padding: 0px 10px;
+    } 
 }
 
 @media (min-width:1924px) and (max-width:2620px) {
+    .hotel-item {
+        padding: 0px 10px;
+    }
+    .hotel-desitnation-place {
+        padding: 0px 10px;
+    }
 
 }
-/* about  */
+/*about*/
 .about-section{
     position: relative;
     padding: 50px 0px 50px;
 }
 #about-image {
     width: 100%;
+    border-radius: 4px;
 }
 .sec-title {
     position: relative;
@@ -292,7 +331,6 @@ button {
     text-align: left;
     margin-bottom: 10px;
 }
-
 .sec-title .title {
     position: relative;
     display: block;
@@ -302,7 +340,6 @@ button {
     font-weight: 700;
     margin: 15px 0px;
 }
-
 .sec-title h2 {
     position: relative;
     display: block;
@@ -369,6 +406,97 @@ button {
 .card img{
     height: auto;
     width: auto;
+}
+/* landing section */
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#landing-hotels{
+    padding: 30px;
+}
+.landingcard{
+    border-radius: 10px;
+    box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 25px 40px 40px;
+}
+
+.hotel-item{
+    position: relative;
+}
+.hotel-item p{
+    padding: 5px 0px;
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+}
+.hotel-desitnation-place p{
+    padding: 5px 0px;
+        text-align: left;
+        color: #000;
+        font-weight: 600;
+}
+.hotels-desitnation-slider {
+    padding: 5px 0px;
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+}
+.landingcard h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0px;
+    text-align: left;
+}
+.hotels-slider,
+.hotels-desitnation-slider{
+    width: 100%;
+    height: 200px;
+    max-height: 260px !important;
+    object-fit: cover;
+    border-radius: 13px;
+    position: relative;
+    z-index: 2;
+    min-width: 178px;
+}
+.hotel-desitnation-place{
+    position: relative;
+}
+.trending-hotellist{
+    position: relative;
+}
+.trends{
+    border: 1px solid var(--bui_color_white);
+    border-radius: var(--bui_border_radius_200);
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+}
+.gest{
+    box-sizing: border-box;
+    color: var(--bui_color_white);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00224F", endColorstr="#00001e47", GradientType=0);
+    left: 15px;
+    margin-bottom: var(--bui_spacing_3x);
+    padding: var(--bui_spacing_6x) var(--bui_spacing_4x) var(--bui_spacing_6x);
+    position: absolute;
+    text-shadow: 1px 1px 1px var(--bui_color_black);
+    top: 15px;
+    width: 100%;
+    z-index: 2;
+    text-align: left;
+}
+.gest p{
+    color:#fff;
+    font-weight: 600;
 }
 /* rooms */
 .rooms-area{
@@ -577,14 +705,13 @@ button {
 }
 
  .inner-contact .contact-form button:hover {
-    background-color: palevioletred;
+    background-color: #0070ad;
     color: white;
 }
 .address-info {
     margin-top: 30px;
     text-align: left;
 }
-
 h2 {
     font-size: 24px;
     font-weight: bold;

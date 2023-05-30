@@ -4,11 +4,11 @@ const About = () => {
         <>
         <div className='contact-banner'>
             <div className="container text-center">
-			<div className="row">
+			  <div className="row">
 				<div className="col-lg-12">
-                <h3 className='top-text'>About Us</h3>
+          <h3 className='top-text'>About Us</h3>
 				</div>
-			</div>
+			  </div>
 		    </div>
         </div>
         <section className="about-section">

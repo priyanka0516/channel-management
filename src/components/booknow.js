@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-const BookNow = () => {
+  const BookNow = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [mobileNo, setMobileNo] = useState('');
   const [otp, setOtp] = useState('');
   const [showContinueButton, setShowContinueButton] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Send OTP logic here
-    // For demonstration purposes, we'll just display the OTP and show the Continue button
-    const generatedOtp = generateOtp(); // Function to generate OTP
+    const generatedOtp = generateOtp();
     setOtp(generatedOtp);
     setShowContinueButton(true);
   };
 
   const handleContinue = () => {
-    // Continue logic here
-    // This function will be called when the user clicks the Continue button after entering the OTP
     console.log('Continue button clicked');
   };
 
@@ -122,12 +115,11 @@ const BookNow = () => {
                                 <div className='c2-left-icon'>   <img src={require('./assets/calendar.png')} alt="about" id="about-image"/></div>
                                 <div className='dates'>             
                                 <span>Fri, 19 May</span>
-                                      <span>-</span>
-                                      <span>Sat, 20 May</span></div>   
+                                  <span>-</span>
+                                  <span>Sat, 20 May</span></div>   
                                 </div>
                                     <div className="c3"><span>1 Room, 2 Guests</span></div>  
-                                </div>
-                
+                                </div>               
                                     <div className='c4'>
                                       <div className='c5'>
                                           <div className="c-7">Room price for 1 Night X 2 Guests</div>

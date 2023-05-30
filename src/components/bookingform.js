@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
 export default function Bookingform() {
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
@@ -11,7 +10,6 @@ export default function Bookingform() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
   e.preventDefault();
-  // Redirect to Book Now page if all fields are filled
     if (checkIn && checkOut && adults && numOfRooms) {
       navigate('/booknow');
     }
@@ -31,7 +29,7 @@ export default function Bookingform() {
             onChange={(e) => setCheckIn(e.target.value)}
           />
         </div>
-         <div className="col-md-3">
+        <div className="col-md-3">
           <input
             type="date"
             required
@@ -53,7 +51,7 @@ export default function Bookingform() {
             onChange={(e) => setAdults(e.target.value)}
           />
         </div>
-         <div className="col-md-3">
+        <div className="col-md-3">
           <input
             type="number"
             required
@@ -64,7 +62,7 @@ export default function Bookingform() {
             onChange={(e) => setChildren(e.target.value)}
           />
         </div>
-      <div className="col-md-3">
+        <div className="col-md-3">
           <input
             type="number"
             id="numOfRooms"
@@ -84,7 +82,7 @@ export default function Bookingform() {
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
           />
-          </div>
+        </div>
         <div className="col-md-3">
           <button type="submit" className="book-button">Book Now</button>                   
         </div>      

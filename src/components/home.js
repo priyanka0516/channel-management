@@ -5,6 +5,7 @@ import { Card, CardGroup, Container } from 'react-bootstrap';
 import "slick-carousel/slick/slick-theme.css";
 import Iframe from 'react-iframe';
 import Bookingform from "./bookingform";
+import { Link } from "react-router-dom";
 function Home() {
   const settings = {
     dots: false,
@@ -319,9 +320,11 @@ function Home() {
                 <div>
                 <h2>Explore India</h2>
                 <Slider {...hoteldestination}>
-                <div className="hotel-desitnation-place">
+                  <div className="hotel-desitnation-place">
+                  <Link to="/hotel">
                   <img src={require('./assets/goa.jpg')} alt="image3" className="hotels-desitnation-slider" />
-                  <p>Goa</p>
+                        <p>Goa</p>
+                        </Link>
                 </div>
                   <div className="hotel-desitnation-place">
                   <img src={require('./assets/manali.jpg')} alt="image3" className="hotels-desitnation-slider" />

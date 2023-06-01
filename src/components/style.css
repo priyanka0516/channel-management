@@ -105,27 +105,18 @@ body {
     color:#000;
     font-size: 14px;
 }
-select {
+/* select {
     margin: 0px 1em;
     padding: 1em;
     width: 90%;
-    /* border-radius: 8px; */
     border-style: none;
     border: 1px solid #e4e6e8;
     transition: 0.1s ease;
     word-wrap: normal
-}
-
-input {
-    display: block;
-    margin: 1em;
-    padding: 1em;
-    width: 90%;
-    font-size: 14PX;
-    /* border-radius: 8px; */
-    border-style: none;
-    border: 1px solid #e4e6e8;
-    transition: 0.1s ease;
+} */
+.hotels-pic{
+    width: 100%;
+    border-radius: 18px;
 }
 
 input:hover {
@@ -135,8 +126,8 @@ input:hover {
 
 .book-button {
     width: 100%;
-    padding: 15px;
-    margin: 10px 0px;
+    padding: 14px;
+    margin: 30px 0px;
     font-size: 14px;
     border: 1px solid #e4e6e8;
     background-color: #0070ad;
@@ -180,7 +171,17 @@ label {
     color: red;
 }
 input {
+    padding: 1em;
     width: 100%;
+    font-size: 14px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+select{
+    padding: 1em;
+    width: 100%;
+    font-size: 14px;
     margin: 10px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -424,6 +425,12 @@ button {
     box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     padding: 25px 40px 40px;
+    margin-top: 10px;
+}
+.landingcard2{
+    border-radius: 10px;
+        box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
 }
 
 .hotel-item{
@@ -1472,4 +1479,93 @@ a{
 .dtr-feature-box-icon {
     background-color: #0089f3;
     color: #fff;
+}
+/* hotel */
+.all-hotel{
+    position: relative;
+    padding: 50px 0px;
+}
+.allroom-hotel{
+    display: flex;
+}
+.left-allroom-hotel{
+    flex: 0 0 auto;
+    width: 200px;
+}
+.right-allroom-hotel{
+    flex: 1 1 auto;
+    padding: 20px;
+    margin-left: var(--bui_spacing_4x);
+    width: calc(100% - 200px - var(--bui_spacing_4x));
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    text-align: left;
+}
+.left-content h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+.left-content h6{
+    font-weight: 600;
+    font-size: 12px;
+}
+.left-content p{
+    font-size: 14px;
+    color:#000;
+}
+.left-content h5:hover{
+    color: #0070ad;
+}
+.right-content {
+    text-align: left;
+}
+.right-content p {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    font-weight: 700;
+}
+.right-content span {
+    font-size: 12px;
+    color: #0070ad;
+}
+.down-part{
+    display: block;
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.grey-text{
+    color:#a2a2a2;
+    font-size: 12px;
+    margin: 3px 0px;
+}
+.lightblack-text{
+    font-size: 12px;
+    font-weight: 500;
+    color: #191919;
+    line-height: 18px;
+    margin: 3px 0px;
+}
+.red-text{
+    font-size: 12px;
+    font-weight: 700;
+    color: #d4111e;
+    margin: 3px 0px;
+    line-height: 18px;  
+}
+.down-part .right-content{
+    text-align: end;
+}
+.green-text{
+    font-size: 12px;
+    font-weight: 500;
+    margin: 3px 0px;
+    color: #008234;
+    line-height: 18px;
 }

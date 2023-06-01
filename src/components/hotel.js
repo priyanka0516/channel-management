@@ -1,27 +1,8 @@
 import React from 'react';
 import Bookingform from './bookingform';
 import Iframe from 'react-iframe';
+import { Link } from 'react-router-dom';
 export default function Hotel() {
-   const Goahotels =  [
-  {
-    "id": 1,
-    "title": "Card 1",
-    "text": "This is the text for card 1.",
-    "image": "image1.jpg"
-  },
-  {
-    "id": 2,
-    "title": "Card 2",
-    "text": "This is the text for card 2.",
-    "image": "image2.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Card 3",
-    "text": "This is the text for card 3.",
-    "image": "image3.jpg"
-  }
-]
     return (
     <>
     <div className="banner-section">      
@@ -78,7 +59,7 @@ export default function Hotel() {
                                 <div className="lightblack-text">1 Night,2 Adults</div>
                                 <h6>₹ 12,377</h6>
                                 <div className="lightblack-text">+₹ 3,689 taxes & fees</div>
-                                <div className=''><button>See Availability</button></div>
+                                <div className=''><Link to="/details"><button>See Availability</button></Link></div>
                             </div>
                         </div>       
                         </div>

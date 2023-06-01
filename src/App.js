@@ -16,6 +16,7 @@ import PaymentPage from './components/paymentpage';
 import Login from './components/Login';
 import Forgotpassword from './components/forgotpassword';
 import Hotel from './components/hotel';
+import Details from './components/details';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path='/forgotpassword' element={<Forgotpassword />} />
         <Route path='/hotel' element={<Hotel />} />
+        <Route path='/details' element={<Details />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>

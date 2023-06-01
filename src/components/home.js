@@ -322,9 +322,9 @@ function Home() {
                 <Slider {...hoteldestination}>
                   <div className="hotel-desitnation-place">
                   <Link to="/hotel">
-                  <img src={require('./assets/goa.jpg')} alt="image3" className="hotels-desitnation-slider" />
-                        <p>Goa</p>
-                        </Link>
+                    <img src={require('./assets/goa.jpg')} alt="image3" className="hotels-desitnation-slider" />
+                    <p>Goa</p>
+                  </Link>
                 </div>
                   <div className="hotel-desitnation-place">
                   <img src={require('./assets/manali.jpg')} alt="image3" className="hotels-desitnation-slider" />
@@ -403,7 +403,7 @@ function Home() {
             <div className="row">
               <div className="col-md-12">
                  <div id="map">   
-                        <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.188577567174!2d85.7408903143954!3d20.29246011788201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1907e655555555%3A0x3f6fe26d44d5028b!2sQUOTUS%20SOFTWARE%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1669873461046!5m2!1sen!2sin"      
+                         <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.188577567174!2d85.7408903143954!3d20.29246011788201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1907e655555555%3A0x3f6fe26d44d5028b!2sQUOTUS%20SOFTWARE%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1669873461046!5m2!1sen!2sin"      
                         width="100%"
                         id="myId"
                         height="320px"

@@ -12,19 +12,17 @@ import { Link } from 'react-router-dom';
     setOtp(generatedOtp);
     setShowContinueButton(true);
   };
-
   const handleContinue = () => {
     console.log('Continue button clicked');
   };
-
   const generateOtp = () => {
     // Generate a random 4-digit OTP
     return Math.floor(1000 + Math.random() * 9000);
   };
   return (
     <div className='booking-Ending'>
-        <div className='container'>
-            <div className='row'>
+      <div className='container'>
+        <div className='row'>
                 <div className='col-md-6'>
                     <div className="book-top"><span><span role="img" aria-label="discount">🎉</span> <span>Yay! you just saved ₹763 on this booking!</span></span></div>
                         <div className='booking-left'>
@@ -42,7 +40,6 @@ import { Link } from 'react-router-dom';
                                 required
                             />
                             </div>
-
                             <div className="col-md-6">
                             <label htmlFor="email">Email:</label>
                             <input
@@ -53,7 +50,6 @@ import { Link } from 'react-router-dom';
                                 required
                             />
                             </div>
-
         <div className="col-md-6">
           <label htmlFor="mobileNo">Mobile No:</label>
           <input

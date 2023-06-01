@@ -19,7 +19,7 @@ const cardData = [
   { id: 2, heading: 'Standard Twin Bedroom', text: '29 m2 with private space and two beds of 120 cm wide with street view and standard amenities.' },
   { id: 3, heading: 'Standard King Room', text: '26 m2, Front Street view, With King bed , private bathroom and standard amenities.' },
   { id: 4, heading: 'Junior Suite', text: '42 m2 , One bedroom and living room with kitchen facility.' },
-    { id: 5, heading: 'Executive Suite', text: '51 m2 One bedroom and living room with sofa bed and sitting area , kitchenette furnished with cooking facility.' },
+{ id: 5, heading: 'Executive Suite', text: '51 m2 One bedroom and living room with sofa bed and sitting area , kitchenette furnished with cooking facility.' },
   { id: 6, heading: 'Diplomat Suite', text: '42 m2 , One bedroom and living room with kitchen facility.' },
   { id: 7, heading: 'Handicapped Suite', text: '51 m2 One bedroom and living room with sofa bed and sitting area , kitchenette furnished with cooking facility.' },
 ];
@@ -66,8 +66,8 @@ const cardData = [
                             </ul>
                             </div>
                                 <div className="right-text">
-                                                <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
-                                                  <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
+                                    <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
+                                    <Link to="/bookroom"><button className="service-button">Book Now</button></Link>
                                 </div>
                         </div>
                         </div>

@@ -29,7 +29,7 @@ export default function Details() {
                     <div className='landingcard'>
                         <div className='row'>
                                   <h3 className='nameHotel'>Treebo Trend Lands End Beach Resort Morjim</h3>
-                                <p>Lorem ipsum</p>
+                                  <p style={{textAlign:"left"}}>Near IDX Tower</p>
                             <div className='col-md-4'>
                                 <img src={require('./assets/pic1.jpg')} alt="image3" className="hotels-pic" />
                                 <img src={require('./assets/pic2.jpg')} alt="image3" className="hotels-pic2" />
@@ -78,20 +78,22 @@ export default function Details() {
                     </div>   
                 </div>
                   </div>
-                   <div className='row'>
-                <div className='landingcard'> 
-                <h5>Hotel policies</h5>          
-                    <div className='policies'>
-                              <ul>
-                                  <li><p>Couples are welcome</p></li>
-                                  <li><p>Guests can check in using any local or outstation ID proof (PAN card not accepted).</p></li>
-                                  <li><p>As a complimentary benefit, your stay is now insured by Acko.</p></li>
-                                  <li><p>This hotel is serviced under the trade name of Sri Krishna Palace as per quality standards of Crown.</p></li>
-       </ul>
-                    </div>   
+                <div className='row'>
+                    <div className='landingcard'> 
+                       <h3>Description</h3>   
+                        <p> Stay is conveniently situated in Bhubaneswar. This budget hotel has all the amenities you need for a comfortable stay and is just 20 km from Nandankanan Zoological Park and 4 km from Udaygiri and Khandagiri Caves.</p>
+                        <h5>Hotel policies</h5>          
+                        <div className='policies'>
+                            <ul>
+                                <li><p>Couples are welcome</p></li>
+                                <li><p>Guests can check in using any local or outstation ID proof (PAN card not accepted).</p></li>
+                                <li><p>As a complimentary benefit, your stay is now insured by Acko.</p></li>
+                                <li><p>This hotel is serviced under the trade name of Sri Krishna Palace as per quality standards of Crown.</p></li>
+                            </ul>
+                        </div>   
+                    </div>
                 </div>
             </div>
-        </div>
           </div>
           <div className='xxx'>
               <div className='container'>
@@ -116,7 +118,7 @@ export default function Details() {
                               <div className='book-right-bottom'>
                               <div className='c2'>
                               <div className="c2-left">
-                                <div className='c2-left-icon'>   <img src={require('./assets/calendar.png')} alt="about" id="about-image"/></div>
+                                <div className='c2-left-icon'><img src={require('./assets/calendar.png')} alt="about" id="about-image"/></div>
                                 <div className='dates'>             
                                 <span>Fri, 19 June</span>
                                   <span>-</span>

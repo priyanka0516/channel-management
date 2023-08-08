@@ -282,11 +282,13 @@ function Home() {
               <h2>Trending Destinations</h2>
               <div className="trending-hotellist">
               <div className="row">
-                <div className="col-md-6">
-                  <div className="trends">
+                  <div className="col-md-6">
+                    <Link to="destination">
+                    <div className="trends">
                     <img src={require('./assets/himachal.jpg')} alt="image3" className="hotels-desitnation-slider" />
-                    <div className="gest"><p>Himachal Pradesh</p></div>
-                  </div> 
+                        <div className="gest"><p>Himachal Pradesh</p></div>
+                          </div> 
+                    </Link>
                 </div>
                   <div className="col-md-6">
                     <div className="trends">

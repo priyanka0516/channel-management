@@ -11,7 +11,6 @@ export default class Header extends Component {
      this.state = {
       show: false
     };
-  
   }
 
   setNavExpanded = (expanded) => {
@@ -35,7 +34,7 @@ export default class Header extends Component {
       <>
         <Navbar bg="white" variant="dark" expand="lg" sticky="top" onToggle={this.setNavExpanded} expanded={this.state.navExpanded}>
         <Container>
-          <Navbar.Brand><img src={require('./assets/Crown-Logo.png')} alt="logo"/></Navbar.Brand>
+          <Navbar.Brand><img src={require('./assets/logo.png')} alt="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto" onClick={this.setNavClose}>

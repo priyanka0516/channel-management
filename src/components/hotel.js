@@ -32,7 +32,7 @@ export default function Hotel() {
                 <div className='row'>
                     <div className='col-md-4'>
                         <div className='a'>
-                            <img src={require('./assets/himachal.jpg')} alt="image3" className="hotels-pic" />
+                            <img src={require('./assets/mari.jpg')} alt="image3" className="hotels-pic" />
                         </div>         
                     </div>
                     <div className='col-md-8'>
@@ -70,7 +70,7 @@ export default function Hotel() {
                 <div className='row'>
                     <div className='col-md-4'>
                         <div className='a'>
-                            <img src={require('./assets/himachal.jpg')} alt="image3"className="hotels-pic" />
+                            <img src={require('./assets/sea-saphire.jpg')} alt="image3"className="hotels-pic" />
                         </div>         
                     </div>
                     <div className='col-md-8'>
@@ -108,7 +108,7 @@ export default function Hotel() {
                 <div className='row'>
                     <div className='col-md-4'>
                         <div className='a'>
-                            <img src={require('./assets/himachal.jpg')} alt="image3" className="hotels-pic" />
+                            <img src={require('./assets/la-vera.jpg')} alt="image3" className="hotels-pic" />
                         </div>         
                     </div>
                     <div className='col-md-8'>

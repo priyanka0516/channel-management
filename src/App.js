@@ -17,6 +17,8 @@ import Login from './components/Login';
 import Forgotpassword from './components/forgotpassword';
 import Hotel from './components/hotel';
 import Details from './components/details';
+import Viewdeatils from './components/view-deatils';
+import Destination from './components/destination';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
         <Route path='/forgotpassword' element={<Forgotpassword />} />
         <Route path='/hotel' element={<Hotel />} />
         <Route path='/details' element={<Details />} />
+        <Route path='/viewdetails' element={<Viewdeatils />} />
+        <Route path='/destination' element={<Destination />} />
       </Routes> 
       <Footer/>
     </BrowserRouter>

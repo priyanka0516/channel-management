@@ -13,7 +13,7 @@ const Rooms = () => {
         autoplay:true,
         slidesToScroll: 1
     };
-    const repeatCount = 7; // Number of times to repeat the card
+    const repeatCount = 7;
     const cardData = [
     { id: 1,heading: 'Superior suites', text: 'Superior suites typically feature a spacious ensuite bathroom equipped with a variety of upscale amenities. These may include a separate bathtub and shower, premium toiletries, bathrobes, slippers, and a hairdryer.' },
     { id: 2, heading: 'Standard Twin Bedroom', text: '29 m2 with private space and two beds of 120 cm wide with street view and standard amenities.' },
@@ -25,13 +25,13 @@ const Rooms = () => {
     ];
     return (
         <>
-           <div className='room-banner'>
+        <div className='room-banner'>
             <div className="container text-center">
-			<div className="row">
-				<div className="col-lg-12">
-                <h3 className='top-text'>Rooms</h3>
-				</div>
-			</div>
+			    <div className="row">
+				    <div className="col-lg-12">
+                        <h3 className='top-text'>Rooms</h3>
+				    </div>
+			    </div>
 		    </div>
         </div>
         <div className="rooms-area">

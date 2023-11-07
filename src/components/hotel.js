@@ -43,7 +43,7 @@ export default function Hotel() {
                             </div>
                         <div className="right-content">
                             <p>Good</p>
-                            <span>201 review</span>            
+                            <span>201 Review</span>            
                         </div>
                         </div>
                         <div className='down-part'>
@@ -76,20 +76,20 @@ export default function Hotel() {
                     <div className='col-md-8'>
                         <div className="card-container">
                             <div className="left-content">
-                            <h5>Sea Sapphire</h5>
-                            <p>Goa</p>
+                                <h5>Sea Sapphire</h5>
+                                <p>Goa</p>
                             </div>
-                        <div className="right-content">
-                            <p>Good</p>
-                            <span>201 review</span>            
-                        </div>
+                            <div className="right-content">
+                                <p>Good</p>
+                                <span>201 Review</span>            
+                            </div>
                         </div>
                         <div className='down-part'>
                         <div className="card-container">
                             <div className="left-content">
                             <h6>Deluxe King Room</h6>
                             <div className="grey-text">2 extra-large double beds</div>
-                            <div className="lightblack-text">FREE cancellation .No prepayment needed</div>
+                            <div className="lightblack-text">FREE cancellation.No prepayment needed</div>
                             <div className="green-text">You can cancel later, so lock in this great price today.</div>
                             <div className="red-text">Only 3 rooms left at this price on our site</div>
                             </div>
@@ -119,7 +119,7 @@ export default function Hotel() {
                             </div>
                         <div className="right-content">
                             <p>Good</p>
-                            <span>201 review</span>            
+                            <span>201 Review</span>            
                         </div>
                         </div>
                         <div className='down-part'>
@@ -127,7 +127,7 @@ export default function Hotel() {
                             <div className="left-content">
                             <h6>Deluxe King Room</h6>
                             <div className="grey-text">2 extra-large double beds</div>
-                            <div className="lightblack-text">FREE cancellation .No prepayment needed</div>
+                            <div className="lightblack-text">FREE cancellation.No prepayment needed</div>
                             <div className="green-text">You can cancel later, so lock in this great price today.</div>
                             <div className="red-text">Only 3 rooms left at this price on our site</div>
                             </div>

@@ -38,17 +38,15 @@ export default function Bookingform() {
     event.preventDefault();
      if (checkIn !== '' && checkOut !== '' && adults !== '' && numOfRooms !== '') {  
         setIsSubmitting(true);
-
       // Simulate a delay of 2 seconds
       setTimeout(() => {
         setIsSubmitting(false);
-           navigate('/booknow'); // Change '/next-page' to the actual route of your next page
+          navigate('/booknow'); // Change '/next-page' to the actual route of your next page
       }, 2000);
     } else {
       console.log('Please fill all fields.');
     }
   };
-
     return (
       <form className="checkin-form" onSubmit={handleSubmit}>
         <div className="container">
@@ -82,53 +80,49 @@ export default function Bookingform() {
         <label>Adults</label>
         <div className="input-g">
         <button className="decbutton" onClick={decNum}>-</button>
-                <input
-                  type="number"
-                  value={adults}
-                  readOnly
-                  required
-                  onChange={(e) => setAdults(e.target.value)} />
+          <input
+          type="number"
+          value={adults}
+          readOnly
+          required
+          onChange={(e) => setAdults(e.target.value)} />
         <button className="incbutton" onClick={incNum}>+</button>
       </div>
-  </div>
-
-
-          <div className="col-md-2">
-          <label>children</label>
-          <select
+    </div>
+    <div className="col-md-2">
+      <label>children</label>
+        <select
           id="children"
           required
           name="children"
           placeholder="Children"
           value={children}
-          onChange={(e) => setChildren(e.target.value)}
-        >
+          onChange={(e) => setChildren(e.target.value)}>
           <option value={0}>0</option>
           <option value={1}>1</option>
           <option value={2}>2</option>
           <option value={3}>3</option>
-          {/* Add more options as needed */}
         </select>
-        </div>
-          <div className="col-md-2">
-              <label>Rooms</label>
-               <div className="input-g">
+    </div>
+    <div className="col-md-2">
+      <label>Rooms</label>
+      <div className="input-g">
         <button className="decbutton" onClick={decRooms}>-</button>
-                <input
-                  type="number"
-                  value={numOfRooms}
-                  readOnly
-                  required
-                  onChange={(e) => setNumOfRooms(e.target.value)} />
+          <input
+            type="number"
+            value={numOfRooms}
+            readOnly
+            required
+            onChange={(e) => setNumOfRooms(e.target.value)} />
         <button className="incbutton" onClick={incRooms}>+</button>
       </div>
-        </div>
-        <div className="col-md-2">
-              <button type="submit" className="book-button" >
-                  {isSubmitting ? 'Submitting...' : 'Book Now'}</button>                   
-        </div>          
-        </div>
-        </div>
-      </form>
+    </div>
+    <div className="col-md-2">
+      <button type="submit" className="book-button" >
+        {isSubmitting ? 'Submitting...' : 'Book Now'}</button>                   
+    </div>         
+    </div>
+    </div>
+  </form>
   )
 }
